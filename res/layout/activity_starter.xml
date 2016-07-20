@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.yozard.pp.utils.HackyViewPager
+        android:id="@+id/starter_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dim50" />
+
+    <LinearLayout
+        android:id="@+id/llButtonlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dim50"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <Button
+            android:id="@+id/loginStarter_bt"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".5"
+            android:background="@drawable/bg_cyan_green_sel"
+            android:text="Log In"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/signUpStarter_bt"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".5"
+            android:background="@drawable/bg_orange_sel"
+            android:text="Sign up"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/starterindicator_transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llButtonlayout"
+        android:layout_marginBottom="@dimen/dim10"
+        android:background="@android:color/transparent"
+        android:padding="5dip"
+        app:fillColor="#FFFFFF"
+        app:pageColor="@android:color/transparent"
+        app:radius="5dp"
+        app:strokeColor="#ffffff"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/tvSecret"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/starterindicator_transparent"
+        android:layout_marginBottom="@dimen/dim10"
+        android:text="Swipe to learn the secret"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

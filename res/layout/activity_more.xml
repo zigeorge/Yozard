@@ -1,0 +1,331 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite"
+    tools:context="com.yozard.pp.MoreActivity" >
+
+    <LinearLayout
+        android:id="@+id/llProfileDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim5"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/civProfileImage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/profile_pic_height"
+            android:layout_margin="@dimen/dim10"
+            android:layout_weight="3"
+            android:scaleType="fitXY"
+            android:src="@drawable/upload" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dim10"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zahidul Islam"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:scrollbars="horizontal"
+                android:singleLine="true"
+                android:text="george@gmail.com"
+                android:textColor="@color/dkgray"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dim5"
+            android:layout_weight="3" >
+
+            <TextView
+                android:id="@+id/tvEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/border_cyan_bg_trans_offwhite_sel"
+                android:gravity="center"
+                android:text="EDIT"
+                android:textColor="@drawable/cyan_text_color_selector"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llProfileDetail"
+        android:layout_margin="@dimen/dim5"
+        android:background="@drawable/bg_white_grad_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivInstruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim5"
+            android:layout_marginLeft="@dimen/dim15"
+            android:layout_marginRight="@dimen/dim15"
+            android:layout_marginTop="@dimen/dim5"
+            android:src="@drawable/guide" />
+
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instructions" />
+    </LinearLayout>
+
+    <!-- <LinearLayout
+        android:id="@+id/llInstoreCoupons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llProfileDetail"
+        android:layout_margin="@dimen/dim5"
+        android:background="@drawable/more_item_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivInstoreCoupons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim5"
+            android:layout_marginLeft="@dimen/dim15"
+            android:layout_marginRight="@dimen/dim15"
+            android:layout_marginTop="@dimen/dim5"
+            android:src="@drawable/ic_instore" />
+
+        <TextView
+            android:id="@+id/tvInstoreCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="In Store Coupons" />
+    </LinearLayout> 
+
+    <LinearLayout
+        android:id="@+id/llEnterCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llInstoreCoupons"
+        android:layout_margin="@dimen/dim5"
+        android:background="@drawable/more_item_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivEnterCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim5"
+            android:layout_marginLeft="@dimen/dim15"
+            android:layout_marginRight="@dimen/dim15"
+            android:layout_marginTop="@dimen/dim5"
+            android:src="@drawable/wallet_qr" />
+
+        <TextView
+            android:id="@+id/tvEnterCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Code" />
+    </LinearLayout> -->
+
+    <LinearLayout
+        android:id="@+id/llSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llInstructions"
+        android:layout_margin="@dimen/dim5"
+        android:background="@drawable/bg_white_grad_selector"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/ivSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dim5"
+                android:layout_marginLeft="@dimen/dim15"
+                android:layout_marginRight="@dimen/dim15"
+                android:layout_marginTop="@dimen/dim5"
+                android:src="@drawable/ic_setting" />
+
+            <TextView
+                android:id="@+id/tvSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCouponExReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tvCouponExReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dim50"
+                android:text="Coupon Expiry Reminder" />
+
+            <ToggleButton
+                android:id="@+id/tbCouponExpReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dim30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/toggle_image_sel"
+                android:checked="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:id="@+id/llTransactionHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llSettings"
+        android:layout_margin="@dimen/dim5"
+        android:background="@drawable/more_item_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivTransactionHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim5"
+            android:layout_marginLeft="@dimen/dim15"
+            android:layout_marginRight="@dimen/dim15"
+            android:layout_marginTop="@dimen/dim5"
+            android:src="@drawable/favourite_1" />
+
+        <TextView
+            android:id="@+id/tvTransactionHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transaction History" />
+    </LinearLayout>
+    -->
+
+    <LinearLayout
+        android:id="@+id/llInviteFriends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llSettings"
+        android:layout_margin="@dimen/dim5"
+        android:background="@drawable/bg_white_grad_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivInviteFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim5"
+            android:layout_marginLeft="@dimen/dim15"
+            android:layout_marginRight="@dimen/dim15"
+            android:layout_marginTop="@dimen/dim5"
+            android:src="@drawable/ic_invite_fr" />
+
+        <TextView
+            android:id="@+id/tvInviteFriends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invite Friends" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llInviteFriends"
+        android:layout_margin="@dimen/dim5"
+        android:background="@drawable/bg_white_grad_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim5"
+            android:layout_marginLeft="@dimen/dim15"
+            android:layout_marginRight="@dimen/dim15"
+            android:layout_marginTop="@dimen/dim5"
+            android:src="@drawable/ic_about" />
+
+        <TextView
+            android:id="@+id/tvAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSignout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llAbout"
+        android:layout_margin="@dimen/dim5"
+        android:background="@drawable/bg_white_grad_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivSignout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim5"
+            android:layout_marginLeft="@dimen/dim15"
+            android:layout_marginRight="@dimen/dim15"
+            android:layout_marginTop="@dimen/dim5"
+            android:src="@drawable/ic_signout" />
+
+        <TextView
+            android:id="@+id/tvSignout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Out" />
+    </LinearLayout>
+
+</RelativeLayout>

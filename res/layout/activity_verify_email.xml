@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.yozard.pp.VerifyEmailActivity" >
+
+    <TextView
+        android:id="@+id/tvCompleteprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etFullName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="COMPLETE YOUR PROFILE"
+        android:textColor="#499BFF"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/etMail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/border_grey_bg_trans"
+        android:hint="Full Name"
+        android:padding="5dp" />
+
+    <EditText
+        android:id="@+id/etMail"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_grey_bg_trans"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:padding="5dp" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etMail"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_green_sel"
+        android:drawableLeft="@drawable/ic_tick"
+        android:paddingRight="@dimen/dim15"
+        android:paddingLeft="@dimen/dim10"
+        android:paddingTop="@dimen/dim5"
+        android:paddingBottom="@dimen/dim5"
+        android:drawablePadding="5dp"
+        android:text="Done"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

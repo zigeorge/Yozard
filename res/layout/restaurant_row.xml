@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim200"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10"
+        android:background="@drawable/bg_trans_rounded" >
+
+        <ImageView
+            android:id="@+id/ivCompanyImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:src="@drawable/image_girl_shoping"
+            android:background="@color/gray"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/rlItemContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_trans_black_grad_rounded" >
+
+            <TextView
+                android:id="@+id/tvCompanyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim10"
+                android:layout_marginTop="@dimen/dim10"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:scrollbars="horizontal"
+                android:singleLine="true"
+                android:text="RED RES Fried Chiken Restaurant and Five Star"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimTex20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCompanyArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCompanyName"
+                android:layout_marginLeft="@dimen/dim10"
+                android:layout_marginTop="@dimen/dim5"
+                android:text="Dublin"
+                android:textColor="@color/white_trans"
+                android:textSize="@dimen/dimTex12" />
+
+            <RatingBar
+                android:id="@+id/rbRestaurant"
+                style="@style/CustomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim5"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvCompanyName"
+                android:layout_marginRight="@dimen/dim10"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="4.3"
+                android:stepSize="0.5" />
+
+            <TextView
+                android:id="@+id/tvDetails"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim50"
+                android:layout_below="@+id/rbRestaurant"
+                android:layout_margin="@dimen/dim10"
+                android:text="slkdfjnsjgnslkj avb jf vjasfdg dsjf jfe g dsfb dfb jhfgsf vj f jfjgbdf bd slkdfjnsjgnslkj avb jf vjasfdg dsjf jfe g dsfb dfb jhfgsf vj f jfjgbdf bd dsjf jfe g dsfb dfb jhfgsf vj f jfjgbdf bd slkdfjnsjgnslkj avb jf vjasfdg dsjf jfe g dsfb dfb jhfgsf vj f jfjgbdf bd "
+                android:textColor="@color/bg_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dim10"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tvMenu"
+                        android:layout_width="@dimen/dim50"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:background="@drawable/border_white_rounded_bg_trans_sel"
+                        android:text="Menu"
+                        android:textColor="@drawable/white_orange_text_color_selector"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tvReviews"
+                        android:layout_width="@dimen/dim50"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:background="@drawable/border_white_rounded_bg_trans_sel"
+                        android:text="Reviews"
+                        android:textColor="@drawable/white_orange_text_color_selector"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tvFollow"
+                        android:layout_width="@dimen/dim50"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:background="@drawable/border_white_rounded_bg_trans_sel"
+                        android:text="Follow"
+                        android:textColor="@drawable/white_orange_text_color_selector"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tv_Details"
+                        android:layout_width="@dimen/dim50"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:background="@drawable/border_white_rounded_bg_trans"
+                        android:text="Details"
+                        android:textColor="@drawable/white_orange_text_color_selector"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

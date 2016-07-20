@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="picin_myaccount">110dp</dimen>
+    <dimen name="picin_myprofile">60dp</dimen>
+    
+    <dimen name="left_right_margin">40dp</dimen>
+    <dimen name="up_down_margin">5dp</dimen>
+    <dimen name="padding">10dp</dimen>
+
+</resources>

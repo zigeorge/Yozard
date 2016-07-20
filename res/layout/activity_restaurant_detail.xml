@@ -1,0 +1,436 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite"
+    tools:context="com.yozard.pp.RestaurantDetailActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlRestaurantHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim120"
+        android:layout_marginBottom="@dimen/dim10"
+        android:layout_marginLeft="@dimen/dim5"
+        android:layout_marginRight="@dimen/dim5"
+        android:layout_marginTop="@dimen/dim10" >
+
+        <ImageView
+            android:id="@+id/ivCompany"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_trans_black_grad_rounded"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/rlHeaderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4CF16221"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim5"
+                android:layout_marginRight="@dimen/dim10"
+                android:layout_marginTop="@dimen/dim15"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/ivCompanyLogo"
+                    android:layout_width="@dimen/dim50"
+                    android:layout_height="@dimen/dim50"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvCompanyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:scrollbars="horizontal"
+                        android:singleLine="true"
+                        android:text="Restaurant Name"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="horizontal"
+                            android:singleLine="true"
+                            android:text="Banani 11, Dhaka"
+                            android:textColor="@color/white" />
+
+                        <RatingBar
+                            android:id="@+id/ratingRestaurant"
+                            style="@style/CustomRatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:numStars="5"
+                            android:rating="4.3"
+                            android:stepSize="0.5" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pbRestaurantHeader"
+            style="@android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlRestaurantHeader" >
+
+        <RelativeLayout
+            android:id="@+id/rlRestaurantBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim10"
+            android:layout_marginLeft="@dimen/dim5"
+            android:layout_marginRight="@dimen/dim5"
+            android:layout_marginTop="@dimen/dim10" >
+
+            <LinearLayout
+                android:id="@+id/llTabOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dim5"
+                android:paddingTop="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MENU"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="@dimen/dim20"
+                    android:background="@color/transparent_black" />
+
+                <TextView
+                    android:id="@+id/tvReview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="REVIEW"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="@dimen/dim20"
+                    android:background="@color/transparent_black" />
+
+                <TextView
+                    android:id="@+id/tvCoupons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="COUPONS"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llTabOptions"
+                android:layout_marginTop="@dimen/dim10"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dim5"
+                android:paddingLeft="@dimen/dim10"
+                android:paddingRight="@dimen/dim10"
+                android:paddingTop="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvAddressHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim5"
+                    android:text="ADDRESS"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvDetailAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAddressHeader"
+                    android:maxLines="4"
+                    android:text="Nikunja 2, Road - 15, House - 47, F - c1, Dhaka - 1229"
+                    android:textColor="@color/dkgray"
+                    android:textSize="14sp" />
+
+                <ProgressBar
+                    android:id="@+id/pbAddress"
+                    style="@android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlAddress"
+                android:layout_marginTop="@dimen/dim10"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dim5"
+                android:paddingLeft="@dimen/dim10"
+                android:paddingRight="@dimen/dim10"
+                android:paddingTop="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvMenuHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim5"
+                    android:text="MENU"
+                    android:textColor="@color/black" />
+
+                <ListView
+                    android:id="@+id/lvMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvMenuHeader" />
+
+                <ProgressBar
+                    android:id="@+id/pbMenu"
+                    style="@android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCoupons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlMenu"
+                android:layout_marginTop="@dimen/dim10"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dim5"
+                android:paddingLeft="@dimen/dim10"
+                android:paddingRight="@dimen/dim10"
+                android:paddingTop="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvCouponsHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim5"
+                    android:text="COUPON"
+                    android:textColor="@color/black" />
+
+                <ListView
+                    android:id="@+id/lvCoupons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCouponsHeader" />
+
+                <ProgressBar
+                    android:id="@+id/pbCoupons"
+                    style="@android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlCoupons"
+                android:layout_marginTop="@dimen/dim10"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dim5"
+                android:paddingLeft="@dimen/dim10"
+                android:paddingRight="@dimen/dim10"
+                android:paddingTop="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvReviewsHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim5"
+                    android:text="REVIEW"
+                    android:textColor="@color/black" />
+
+                <ListView
+                    android:id="@+id/lvReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvReviewsHeader" />
+
+                <ProgressBar
+                    android:id="@+id/pbReviews"
+                    style="@android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCuisine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlReviews"
+                android:layout_marginTop="@dimen/dim10"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dim5"
+                android:paddingLeft="@dimen/dim10"
+                android:paddingRight="@dimen/dim10"
+                android:paddingTop="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvCuisineHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim5"
+                    android:text="CUISINE"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvCuisine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCuisineHeader"
+                    android:maxLines="4"
+                    android:text="blah blah blah blah blah blah blah blah"
+                    android:textColor="@color/dkgray"
+                    android:textSize="14sp" />
+
+                <ProgressBar
+                    android:id="@+id/pbCuisine"
+                    style="@android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlKnownfor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlCuisine"
+                android:layout_marginTop="@dimen/dim10"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dim5"
+                android:paddingLeft="@dimen/dim10"
+                android:paddingRight="@dimen/dim10"
+                android:paddingTop="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvKnownforHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim5"
+                    android:text="KNOWN FOR"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvKnownfor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvKnownforHeader"
+                    android:maxLines="4"
+                    android:text="Known for blah blah blah blah blah"
+                    android:textColor="@color/dkgray"
+                    android:textSize="14sp" />
+
+                <ProgressBar
+                    android:id="@+id/pbKnownfor"
+                    style="@android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlFacility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlKnownfor"
+                android:layout_marginTop="@dimen/dim10"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dim5"
+                android:paddingLeft="@dimen/dim10"
+                android:paddingRight="@dimen/dim10"
+                android:paddingTop="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvFacilityHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim5"
+                    android:text="FACILITY"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvFacility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvFacilityHeader"
+                    android:maxLines="4"
+                    android:text="Facilities are blah blah blah blah blah"
+                    android:textColor="@color/dkgray"
+                    android:textSize="14sp" />
+
+                <ProgressBar
+                    android:id="@+id/pbFacility"
+                    style="@android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

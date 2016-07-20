@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight=".57"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".35"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/userId_IV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".35"
+                android:onClick="true"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/name_linear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".65"
+                android:orientation="vertical"
+                android:weightSum="1" >
+
+                <EditText
+                    android:id="@+id/regUser_firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".49"
+                    android:fontFamily="sans-serif"
+                    android:hint="First Name"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/regUser_lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".49"
+                    android:fontFamily="sans-serif"
+                    android:hint="Last Name"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".01"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gender_linear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".13"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".36"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".64"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <RadioButton
+                    android:id="@+id/reg_male_bt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:gravity="left|center_vertical"
+                    android:text="Male"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/reg_female_bt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:gravity="left|center_vertical"
+                    android:text="Female"
+                    android:textSize="14sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".01"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/email_linear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".165"
+            android:orientation="horizontal"
+            android:paddingLeft="2dp"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/reg_email_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".35"
+                android:gravity="center_vertical"
+                android:text="Email"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/regUser_email_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".65"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:hint="example@email.com"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/password_linear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".165"
+            android:orientation="horizontal"
+            android:paddingLeft="2dp"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/reg_email_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".35"
+                android:gravity="center_vertical"
+                android:text="Password"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/regUser_passwor_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".65"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:hint="atleast 6 characters"
+                android:inputType="textPassword"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/brthDate_linear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight=".165"
+            android:orientation="horizontal"
+            android:paddingLeft="2dp"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".35"
+                android:gravity="center_vertical"
+                android:text="Mobile No."
+                android:textStyle="bold" />
+
+            <!-- It is later converted into phone number -->
+
+            <EditText
+                android:id="@+id/regUser_bday_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_weight=".65"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:hint="mobile number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".11"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight=".6"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="By joining you must \nagree to our \nTOS and Privacy policy "
+            android:textColor="#a7a9ab"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/submit_joinNow_bt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".4"
+            android:background="@drawable/bg_orange_sel"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="JOIN NOW"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".06"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/or_button"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reg_facebook_login_bt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="15dp"
+        android:layout_weight=".11"
+        android:background="@drawable/facebook_login"
+        android:fontFamily="sans-serif"
+        android:text="Join with Facebook"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/reg_gPlus_login_bt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="5dp"
+        android:layout_weight=".11"
+        android:background="@drawable/google_login"
+        android:fontFamily="sans-serif"
+        android:text="Join with Google +"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

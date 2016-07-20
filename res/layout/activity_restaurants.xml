@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    tools:context="com.yozard.pp.RestaurantsActivity" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srlRestaurants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ListView
+            android:id="@+id/lvRestaurants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dim10"
+            android:paddingRight="@dimen/dim10"
+            android:paddingBottom="@dimen/dim10" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlProgressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pbRestaurants"
+            style="@android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+        
+        <TextView 
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading Restaurants.."
+            android:layout_marginTop="@dimen/dim5"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/pbRestaurants"/>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

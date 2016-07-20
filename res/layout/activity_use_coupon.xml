@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite"
+    tools:context="com.yozard.pp.UseCouponActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBtnLayout" >
+
+        <RelativeLayout
+            android:id="@+id/rlContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dim10"
+            android:layout_marginLeft="@dimen/dim5"
+            android:layout_marginRight="@dimen/dim5"
+            android:layout_marginTop="@dimen/dim10"
+            android:background="@drawable/bg_white_rounded"
+            android:padding="@dimen/dim5"
+            android:paddingBottom="@dimen/dim10" >
+
+            <TextView
+                android:id="@+id/tvInfoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dim5"
+                android:text="50% Discount of Indian Cuisine"
+                android:textColor="@color/dkgray"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/vUnderline"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tvInfoTitle"
+                android:layout_margin="@dimen/dim5"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/rlInstruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vUnderline"
+                android:layout_margin="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvInstructionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dim5"
+                    android:text="INSTRUCTIONS:"
+                    android:textColor="@color/dkgray"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/ivInstructionExpander"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/expander_open_holo_light" />
+
+                <TextView
+                    android:id="@+id/tvInstructionDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvInstructionLabel"
+                    android:layout_margin="@dimen/dim5"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="@dimen/dim10"
+                    android:text="slkjghaskjfhkajs lkjadbfkajnf kjabnkjf ak kjlabnsdkm akjakdf klasjdfakd fkjabfa f"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlStoreInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlInstruction"
+                android:layout_margin="@dimen/dim5" >
+
+                <TextView
+                    android:id="@+id/tvStoreLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dim5"
+                    android:text="STORE INFORMATION:"
+                    android:textColor="@color/dkgray"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/ivStoreInfoExpander"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/expander_open_holo_light" />
+
+                <ListView
+                    android:id="@+id/lvStores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvStoreLabel"
+                    android:layout_margin="@dimen/dim5"
+                    android:paddingBottom="@dimen/dim10"
+                    android:paddingLeft="@dimen/dim10"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/vUnderline2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/rlStoreInfo"
+                android:layout_marginBottom="@dimen/dim10"
+                android:layout_marginLeft="@dimen/dim5"
+                android:layout_marginRight="@dimen/dim5"
+                android:layout_marginTop="@dimen/dim10"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vUnderline2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim10"
+                android:paddingBottom="@dimen/dim10" >
+
+                <TextView
+                    android:id="@+id/tvEnterOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dim5"
+                    android:text="Enter Accurate"
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/tvAmountGet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEnterOrder"
+                    android:layout_centerHorizontal="true"
+                    android:text="order amount to use"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tvSupriseTreats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAmountGet"
+                    android:layout_centerHorizontal="true"
+                    android:text="coupon successfully"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etOrderAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSupriseTreats"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dim10"
+                    android:layout_marginTop="@dimen/dim10"
+                    android:ems="12"
+                    android:gravity="center"
+                    android:hint="Enter Order Amount"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="@dimen/dim5"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBtnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/light_gray"
+            android:text="CANCEL"
+            android:textColor="@drawable/white_text_color_selector" />
+
+        <Button
+            android:id="@+id/btnUseNow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_cyan_green_sel"
+            android:text="USE NOW"
+            android:textColor="@drawable/white_text_color_selector" />
+    </LinearLayout>
+
+</RelativeLayout>

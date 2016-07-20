@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/border_orange_rounded_bg_trans" android:state_enabled="true" android:state_pressed="true"/>
+    <item android:drawable="@drawable/border_white_rounded_bg_trans"/>
+
+</selector>

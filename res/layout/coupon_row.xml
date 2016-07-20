@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim200"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10"
+        android:background="@drawable/bg_trans_rounded" >
+
+        <ImageView
+            android:id="@+id/ivCompanyImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="@color/gray"
+            android:src="@drawable/image_girl_shoping"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/rlItemContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_trans_black_grad_rounded" >
+
+            <RelativeLayout
+                android:id="@+id/rlTimeRemain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/label_time" >
+
+                <TextView
+                    android:id="@+id/tvRemainingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dim5"
+                    android:text="1D:02H:45M"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimTex12" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rlCouponStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/label_book"
+                android:gravity="center|right" >
+
+                <TextView
+                    android:id="@+id/tvCouponStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dim10"
+                    android:drawableLeft="@drawable/ic_booking"
+                    android:drawablePadding="@dimen/dim5"
+                    android:text="SAVE"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimTex12" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/dim10"
+                android:src="@drawable/ic_label_unfollow" />
+
+            <TextView
+                android:id="@+id/tvCompanyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlTimeRemain"
+                android:layout_marginLeft="@dimen/dim5"
+                android:layout_marginTop="@dimen/dim10"
+                android:text="RED RES Fried Chiken Restaurant"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimTex20"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rldiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_above="@+id/rlCouponStatus"
+                android:layout_marginRight="@dimen/dim5"
+                android:layout_marginBottom="@dimen/dim10"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDiscountAmount"
+                    android:layout_marginTop="@dimen/dim5"
+                    android:text="DISCOUNT"
+                    android:textColor="@color/white_trans"
+                    android:textSize="@dimen/dimTex20" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dim40"
+                    android:layout_alignBottom="@+id/tvDiscountAmount"
+                    android:layout_toRightOf="@+id/tvDiscountAmount"
+                    android:text="%"
+                    android:textColor="@color/white_trans"
+                    android:textSize="@dimen/dimTex35" />
+
+                <TextView
+                    android:id="@+id/tvDiscountAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dim80"
+                    android:fontFamily="sans-serif-condensed"
+                    android:includeFontPadding="false"
+                    android:text="20"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimTex70" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llOtherOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/dim15"
+                android:layout_marginLeft="@dimen/dim5"
+                android:layout_marginRight="@dimen/dim10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/ivOfferImage"
+                    android:layout_width="@dimen/dim50"
+                    android:layout_height="@dimen/dim70"
+                    android:layout_marginRight="@dimen/dim10"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/tvOfferTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="BUY 1\nGET 1"
+                    android:textColor="@color/trans_white"
+                    android:textSize="@dimen/dimTex20"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCompanyArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCompanyName"
+                android:layout_marginLeft="@dimen/dim5"
+                android:layout_marginTop="@dimen/dim5"
+                android:text="Dublin"
+                android:textSize="@dimen/dimTex12"
+                android:textColor="@color/white_trans" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dim10"
+                android:layout_marginLeft="@dimen/dim5"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvBooked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim5"
+                    android:drawableLeft="@drawable/ic_use_book"
+                    android:drawablePadding="@dimen/dim5"
+                    android:text="350 saved"
+                    android:textSize="@dimen/dimTex12"
+                    android:textColor="@color/trans_white" />
+
+                <!-- <TextView
+                    android:id="@+id/tvUsed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim5"
+                    android:drawableLeft="@drawable/ic_coupon_used"
+                    android:drawablePadding="@dimen/dim5"
+                    android:text="30 used"
+                    android:textColor="@color/trans_white" /> -->
+
+                <TextView
+                    android:id="@+id/tvLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_gift"
+                    android:drawablePadding="@dimen/dim5"
+                    android:text="20 LEFT"
+                    android:textColor="@color/txt_cyan2" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

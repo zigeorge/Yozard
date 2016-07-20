@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yozard.pp.UserGuideActivity" xmlns:app="http://schemas.android.com/apk/res/com.yozard.pp">
+
+    <com.yozard.pp.utils.HackyViewPager
+        android:id="@+id/starter_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <com.viewpagerindicator.CirclePageIndicator 
+        android:id="@+id/starterindicator_transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dim20"
+        android:background="@color/transparent"
+        android:padding="@dimen/dim5"
+        app:fillColor="@color/white"
+        app:pageColor="@color/transparent"
+        app:radius="@dimen/dim5"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/tvSecret"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/starterindicator_transparent"
+        android:layout_marginBottom="@dimen/dim10"
+        android:text="Swipe to learn the secret"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

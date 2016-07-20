@@ -1,0 +1,102 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/menu_icon_bg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/LinearTabbed" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" />
+
+            <!-- <RelativeLayout
+                android:id="@+id/reloadLinear"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/trans_doubleash"
+                android:gravity="center"
+                android:padding="3dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/reloadmsg_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Don’t forget to ask for this offer at store.\nUse PROMOPAYOUT as coupon."
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/reloadmsg_bt"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/white_border"
+                    android:text="OK"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+            </RelativeLayout> -->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/msgLinear"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/trans_doubleash"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/errormsg_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#fff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearTabbed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="3dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="2dp"
+                android:background="#d1d2d4" >
+            </LinearLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_icon_bg"
+                android:showDividers="middle" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</TabHost>

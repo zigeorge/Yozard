@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite"
+    tools:context="com.yozard.pp.CouponDetailsActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlInfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim8"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_white_rounded"
+        android:paddingBottom="@dimen/dim10"
+        android:paddingLeft="@dimen/dim10"
+        android:paddingRight="@dimen/dim8" >
+
+        <TextView
+            android:id="@+id/tvDetailsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim5"
+            android:text="50% Discount of Indian Cuisine"
+            android:textColor="@color/dkgray"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/vUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/tvDetailsTitle"
+            android:layout_margin="@dimen/dim5"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/tvInstructionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vUnderline"
+            android:layout_margin="@dimen/dim5"
+            android:text="INSTRUCTIONS:"
+            android:textColor="@color/dkgray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvInstructionDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInstructionLabel"
+            android:layout_margin="@dimen/dim5"
+            android:inputType="textMultiLine"
+            android:paddingLeft="@dimen/dim10"
+            android:text="slkjghaskjfhkajs lkjadbfkajnf kjabnkjf ak kjlabnsdkm akjakdf klasjdfakd fkjabfa f"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvStoreLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInstructionDetails"
+            android:layout_margin="@dimen/dim5"
+            android:text="STORE INFORMATION:"
+            android:textColor="@color/dkgray"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/lvStores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvStoreLabel"
+            android:layout_margin="@dimen/dim5"
+            android:paddingBottom="@dimen/dim10"
+            android:paddingLeft="@dimen/dim10" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/light_gray"
+            android:text="Back"
+            android:textColor="@drawable/white_text_color_selector" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_cyan_green_sel"
+            android:text="Save"
+            android:textColor="@drawable/white_text_color_selector" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".20"
+        android:background="@drawable/orange1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Let the party begin.\nEarn, Save &amp; Win from Today!"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Joining is Simple"
+            android:textColor="#fff"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight=".02" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight=".05"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".7"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="1dip"
+                android:layout_weight=".3"
+                android:background="#2c0066"
+                android:gravity="center_vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:gravity="center"
+                android:text="Already a member? Login"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="1dip"
+                android:layout_weight=".3"
+                android:background="#2c0066"
+                android:gravity="center_vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight=".2"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <EditText
+                android:id="@+id/email_login_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="center_vertical"
+                android:hint="Email/Phone"
+                android:inputType="textEmailAddress"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="3dp"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <EditText
+                android:id="@+id/password_login_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="center_vertical"
+                android:hint="Your password..."
+                android:inputType="textPassword"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".15"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_weight=".7"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/forgotMypassword"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight=".6"
+                android:clickable="true"
+                android:gravity="bottom"
+                android:text="Forgot Password?"
+                android:textColor="#2c0066"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/login_login_bt"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight=".4"
+                android:background="@drawable/bg_cyan_green_sel"
+                android:gravity="center"
+                android:text="LOG IN"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight=".05"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".7"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="1dip"
+                android:layout_weight=".3"
+                android:background="#2c0066"
+                android:gravity="center_vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:gravity="center"
+                android:text="OR CONNECT WITH"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="1dip"
+                android:layout_weight=".3"
+                android:background="#2c0066"
+                android:gravity="center_vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight=".02"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".12"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:weightSum="1" >
+
+            <Button
+                android:id="@+id/login_facebook_login_bt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:background="@drawable/facebook_sel"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:weightSum="1" >
+
+            <Button
+                android:id="@+id/login_gplus_login_bt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:background="@drawable/googlepleus_sel"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight=".19"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/JOinIN_account_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:background="@drawable/border_grey_bg_offwhite_trans_sel"
+            android:gravity="center"
+            android:text="CREATE FREE ACCOUNT"
+            android:textColor="@drawable/gray_text_color_sel"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
